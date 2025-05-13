@@ -1,0 +1,13 @@
+flask
+flask_cors
+transformers
+polars
+sentence_transformers
+bs4
+torch
+requests
+beautifulsoup4
+numpy
+scikit-learn
+pandas
+scipy

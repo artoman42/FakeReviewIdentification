@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ідентифікація фейкових емоційно забарвлених відгуків</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="static/scripts.js"></script>
+  <script>
+    function goToHome() {
+      window.location.href = '/';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Ідентифікація фейкових емоційно забарвлених відгуків</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="goToHome()">Головна</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <h2>Вставте посилання для аналізу</h2>
+      <form id="reviewForm" action="/analyze" method="post">
+        <label for="reviewLink">Посилання:</label>
+        <input type="url" id="reviewLink" name="reviewLink" placeholder="Введіть URL відгуку" required>
+        <button type="submit">Аналізувати</button>
+        <div class="toggle-fake-container">
+          <input type="checkbox" id="toggleFake" checked>
+          <label for="toggleFake">Показати деталі аналізу фейкових відгуків</label>
+        </div>
+      </form>
+    </section>
+    <section id="result-section">
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ідентифікація фейкових емоційно забарвлених відгуків. Всі права захищені. Грачов А. В.</p>
+  </footer>
+</body>
+</html>
